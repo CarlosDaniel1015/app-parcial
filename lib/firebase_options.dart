@@ -41,40 +41,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDemoApiKeyForFlutterAppParcial2026',
-    appId: '1:100000000000:web:abcdef0123456789',
-    messagingSenderId: '100000000000',
-    projectId: 'app-parcial',
-    authDomain: 'app-parcial.firebaseapp.com',
-    storageBucket: 'app-parcial.appspot.com',
+    apiKey: 'AIzaSyCKxmA4AOCBxPIXDBUyWtfqvBginY-1anA',
+    appId: '1:872830840469:web:75f5617ef30673b06bf59c',
+    messagingSenderId: '872830840469',
+    projectId: 'app-parcial-6b24e',
+    authDomain: 'app-parcial-6b24e.firebaseapp.com',
+    storageBucket: 'app-parcial-6b24e.firebasestorage.app',
+    measurementId: 'G-ZFQVGNB8Y9',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDemoApiKeyForFlutterAppParcial2026',
-    appId: '1:100000000000:android:abcdef0123456789',
-    messagingSenderId: '100000000000',
-    projectId: 'app-parcial',
-    storageBucket: 'app-parcial.appspot.com',
+    apiKey: 'AIzaSyDhTt-R-39TXVIx-XYOSsqER1RNPmZ5EF4',
+    appId: '1:872830840469:android:feaf068dc771a2d16bf59c',
+    messagingSenderId: '872830840469',
+    projectId: 'app-parcial-6b24e',
+    storageBucket: 'app-parcial-6b24e.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDemoApiKeyForFlutterAppParcial2026',
-    appId: '1:100000000000:ios:abcdef0123456789',
-    messagingSenderId: '100000000000',
-    projectId: 'app-parcial',
-    storageBucket: 'app-parcial.appspot.com',
-    iosBundleId: 'com.example.appParcial',
+    apiKey: 'AIzaSyBVVJdixbDp-dFD-6QCnNwUJj7urxpgGEE',
+    appId: '1:872830840469:ios:89124d53e38562716bf59c',
+    messagingSenderId: '872830840469',
+    projectId: 'app-parcial-6b24e',
+    storageBucket: 'app-parcial-6b24e.firebasestorage.app',
+    iosClientId: '872830840469-brk1maoq0ef45dabovm95s75b0kigkdj.apps.googleusercontent.com',
+    iosBundleId: 'com.example.formapp',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDemoApiKeyForFlutterAppParcial2026',
-    appId: '1:100000000000:ios:abcdef0123456789',
-    messagingSenderId: '100000000000',
-    projectId: 'app-parcial',
-    storageBucket: 'app-parcial.appspot.com',
-    iosBundleId: 'com.example.appParcial',
+    apiKey: 'AIzaSyBVVJdixbDp-dFD-6QCnNwUJj7urxpgGEE',
+    appId: '1:872830840469:ios:89124d53e38562716bf59c',
+    messagingSenderId: '872830840469',
+    projectId: 'app-parcial-6b24e',
+    storageBucket: 'app-parcial-6b24e.firebasestorage.app',
+    iosClientId: '872830840469-brk1maoq0ef45dabovm95s75b0kigkdj.apps.googleusercontent.com',
+    iosBundleId: 'com.example.formapp',
   );
-
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyDemoApiKeyForFlutterAppParcial2026',
     appId: '1:100000000000:web:abcdef0123456789',
