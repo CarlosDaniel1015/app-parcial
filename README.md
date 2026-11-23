@@ -4,6 +4,17 @@ Aplicación móvil y web desarrollada en Flutter con autenticación completa med
 
 ---
 
+## 🎥 Video Demostrativo del Funcionamiento
+
+> [!IMPORTANT]
+> **Enlace al video de demostración en Google Drive:**
+> 
+> 👉 **[VER VIDEO DEMOSTRATIVO COMPLETO AQUÍ](https://drive.google.com/file/d/1jHO87W0jLE1T3t_pcPNV79EJFZQNZcef/view?usp=sharing)** 👈
+>
+> *El video muestra: Registro de usuario por correo/contraseña, inicio de sesión con Google (selector de cuentas), inicio de sesión con Facebook, feed vertical estilo TikTok con videos de Pexels, pausa/reproducción interactiva y cierre de sesión.*
+
+---
+
 ## 🚀 Características Principales
 
 ### 1. Autenticación Multifactor con Firebase
@@ -57,21 +68,34 @@ dependencies:
 
 ---
 
-## 🛠️ Configuración de Firebase con `flutterfire configure`
+## 🛠️ Configuración en Firebase y Meta Developers
 
-1. **Iniciar sesión en Firebase CLI:**
-   ```bash
-   firebase login
-   ```
-2. **Configurar la aplicación:**
-   ```bash
-   flutterfire configure
-   ```
-   Selecciona tu proyecto de Firebase y las plataformas deseadas (Android, Web, etc.).
-3. **En la consola de Firebase (Authentication > Sign-in method):**
-   - Habilita **Correo electrónico/contraseña**.
-   - Habilita **Google**.
-   - Habilita **Facebook** (ingresando App ID y App Secret de Meta Developers).
+### 1. Activar Métodos de Inicio de Sesión en Firebase Console
+Ingresa a [Firebase Console](https://console.firebase.google.com/), abre tu proyecto (`app-parcial-6b24e`), ve a **Compilación / Build > Authentication > Sign-in method**:
+1. **Correo electrónico/contraseña (Obligatorio para el registro y login con email):**
+   - Haz clic en **Correo electrónico/contraseña**.
+   - Activa el interruptor **Habilitar**.
+   - Haz clic en **Guardar**.
+   *(Si este paso no se realiza, Firebase arroja el error: `Este método de inicio de sesión no está habilitado en Firebase` / `operation-not-allowed`).*
+2. **Google:**
+   - Haz clic en **Google**, activa el interruptor **Habilitar**, selecciona el correo de asistencia del proyecto y haz clic en **Guardar**.
+3. **Facebook:**
+   - Haz clic en **Facebook**, activa el interruptor **Habilitar**.
+   - Requiere el **Identificador de la aplicación (App ID)** y el **Secreto de la aplicación (App Secret)** de [Meta for Developers](https://developers.facebook.com/).
+   - Copia la **URI de redireccionamiento de OAuth** provista por Firebase (ej. `https://app-parcial-6b24e.firebaseapp.com/__/auth/handler`) y pégala en Meta Developers.
+
+### 2. Solución al error de Facebook: *"La aplicación no está activa"*
+Si al iniciar sesión con Facebook aparece el mensaje *"La aplicación no está activa: Actualmente, esta aplicación no está disponible y el desarrollador está al corriente del problema"*, se debe a que la aplicación en [Meta for Developers](https://developers.facebook.com/) está en **Modo de desarrollo**:
+- **Opción A (Recomendada para pruebas):** En Meta for Developers ve a **Roles de la app > Roles** y agrega tu cuenta personal de Facebook como **Tester (Evaluador)** o **Desarrollador**.
+- **Opción B (Publicación):** En la parte superior del panel de Meta for Developers, cambia el switch de **Modo de desarrollo** a **En vivo (Live)** (requiere configurar una Política de Privacidad).
+
+---
+
+## 🎬 Videos Verticales Pexels (Sin recargar GitHub)
+
+Cumpliendo con los requisitos del parcial y la recomendación docente para mantener el repositorio ligero en GitHub:
+- Los videos se transmiten vía streaming directamente desde la CDN de [Pexels Videos Verticales](https://www.pexels.com/es-es/buscar/videos/vertical/).
+- Se encuentran definidos en `lib/models/video_item_model.dart` con URLs directas en formato vertical 9:16 (1080x1920) y metadatos de autor, descripción y música.
 
 ---
 
@@ -81,7 +105,8 @@ dependencies:
 |:---:|:---:|:---:|
 | Formulario validado con Google y Facebook | Registro con confirmación y display name | Videos verticales full screen con autoplay y controles |
 
-> *Nota: Para la entrega en GitHub, puedes adjuntar las capturas de pantalla de tu emulador o dispositivo en la carpeta `screenshots/` o enlazar un video demostrativo de YouTube/Loom aquí.*
+* **Video de prueba completo:** [Abrir video en Google Drive](https://drive.google.com/file/d/1jHO87W0jLE1T3t_pcPNV79EJFZQNZcef/view?usp=sharing)
+*(Asegúrate de que el enlace de Google Drive tenga permisos de "Cualquier persona con el enlace puede ver").*
 
 ---
 

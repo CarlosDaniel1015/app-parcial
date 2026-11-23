@@ -382,13 +382,32 @@ class _VideoCardState extends State<VideoCard>
       );
     }
 
+    final isPortrait = MediaQuery.of(context).size.aspectRatio < 1;
     return Container(
       color: Colors.black,
       child: Center(
-        child: AspectRatio(
-          aspectRatio: _controller!.value.aspectRatio,
-          child: VideoPlayer(_controller!),
-        ),
+        child: isPortrait
+            ? SizedBox.expand(
+                child: FittedBox(
+                  fit: BoxFit.cover,
+                  clipBehavior: Clip.hardEdge,
+                  child: SizedBox(
+                    width: _controller!.value.size.width > 0
+                        ? _controller!.value.size.width
+                        : 1080,
+                    height: _controller!.value.size.height > 0
+                        ? _controller!.value.size.height
+                        : 1920,
+                    child: VideoPlayer(_controller!),
+                  ),
+                ),
+              )
+            : AspectRatio(
+                aspectRatio: _controller!.value.aspectRatio > 0
+                    ? _controller!.value.aspectRatio
+                    : 9 / 16,
+                child: VideoPlayer(_controller!),
+              ),
       ),
     );
   }

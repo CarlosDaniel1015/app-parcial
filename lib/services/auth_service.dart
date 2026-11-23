@@ -64,6 +64,10 @@ class AuthService {
         final GoogleAuthProvider googleProvider = GoogleAuthProvider();
         googleProvider.addScope('email');
         googleProvider.addScope('profile');
+        // Obliga a Google a mostrar siempre el selector de cuentas
+        googleProvider.setCustomParameters({
+          'prompt': 'select_account',
+        });
         return await _auth.signInWithPopup(googleProvider);
       } else {
         // En google_sign_in v7.x se utiliza GoogleSignIn.instance
